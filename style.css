@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 40vw;
+    margin: auto;
+    background-color: #EEE2DE ;
+    box-shadow: 0 0 10px 1px #827c7a;
+}
+.score{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    background-color: #2B2A4C;
+    justify-content: center;
+    align-items: center;
+    font-size:x-large;
+    color: white;
+}
+.game-container{
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(25,1fr);
+    grid-template-rows: repeat(25,1fr);
+
+}
+.food{
+    background-color: rgb(133, 208, 133);
+    border-radius: 50%;
+    /* grid-area:  15 / 25 ; */
+}
+.head{
+    background-color: #B31312;
+    border-radius: 30%;
+    
+}
