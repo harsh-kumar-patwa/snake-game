@@ -53,7 +53,7 @@ document.addEventListener("keydown",function(e){
     let keyPressed = e.key;
     if(keyPressed=="ArrowUp" ){//add && constraint here
         velocityX=0;
-        velcoityY=-1;
+        velcoityY=-1; 
 
     }else if(keyPressed=="ArrowDown"){
         velocityX=0;
