@@ -60,6 +60,15 @@ function renderGame(){
 function scorefunction(val=0){
     score.innerHTML="Current Score "+ val;
 }
+function vibrate() {
+    // Check if the vibration API is supported
+    if ("vibrate" in navigator) {
+      // Vibrate for 200 milliseconds
+      navigator.vibrate(200);
+    } else {
+      console.warn("Vibration API not supported");
+    }
+  }
 
 generateFood();
 renderGame();//no delay for user to load
@@ -72,6 +81,7 @@ game_controller.addEventListener("click",function(e){
     if(keyPressed=="fa-circle-up" && velocityY!=-1){//add && constraint here
         velocityX=0;
         velocityY=-1;
+        vibrate();
         if(flagger){
             scorefunction();
             flagger=false;
@@ -80,6 +90,7 @@ game_controller.addEventListener("click",function(e){
     }else if(keyPressed=="fa-circle-down" && velocityY!=1){
         velocityX=0;
         velocityY=1;
+        vibrate();
         if(flagger){
             scorefunction();
             flagger=false;
@@ -88,6 +99,7 @@ game_controller.addEventListener("click",function(e){
     }else if(keyPressed=="fa-circle-right" && velocityX!=-1){
         velocityX=1;
         velocityY=0;
+        vibrate();
         if(flagger){
             scorefunction();
             flagger=false;
@@ -96,6 +108,7 @@ game_controller.addEventListener("click",function(e){
     }else if(keyPressed=="fa-circle-left" && velocityX!=1){
         velocityX=-1;
         velocityY=0;
+        vibrate();
         if(flagger){
             scorefunction();
             flagger=false;
