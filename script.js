@@ -78,7 +78,7 @@ let flagger = true;
 game_controller.addEventListener("click",function(e){
     // console.log(e);
     let keyPressed = e.target.classList[1];
-    if(keyPressed=="fa-circle-up" && velocityY!=-1){//add && constraint here
+    if(keyPressed=="fa-circle-up" && velocityY!=1){//add && constraint here
         velocityX=0;
         velocityY=-1;
         vibrate();
@@ -87,7 +87,7 @@ game_controller.addEventListener("click",function(e){
             flagger=false;
         }
 
-    }else if(keyPressed=="fa-circle-down" && velocityY!=1){
+    }else if(keyPressed=="fa-circle-down" && velocityY!=-1){
         velocityX=0;
         velocityY=1;
         vibrate();
