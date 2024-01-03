@@ -1,6 +1,6 @@
 let gameContainer = document.querySelector(".game-container");
 let foodX,foodY;
-let velocityX=0,velcoityY=0;
+let velocityX=0,velocityY=0;
 let headX= 12, headY=12;
 let snakeBody = [];
 let game_controller = document.querySelector(".controller");
@@ -31,7 +31,7 @@ function renderGame(){
 
     snakeBody.pop();
     headX+=velocityX;
-    headY+=velcoityY;
+    headY+=velocityY;
     snakeBody.unshift([headX,headY]);
 
     if(headX==0||headY==0||headX==26||headY==26){
@@ -69,33 +69,33 @@ let flagger = true;
 game_controller.addEventListener("click",function(e){
     // console.log(e);
     let keyPressed = e.target.classList[1];
-    if(keyPressed=="fa-circle-up" ){//add && constraint here
+    if(keyPressed=="fa-circle-up" && velocityY!=-1){//add && constraint here
         velocityX=0;
-        velcoityY=-1;
+        velocityY=-1;
         if(flagger){
             scorefunction();
             flagger=false;
         }
 
-    }else if(keyPressed=="fa-circle-down"){
+    }else if(keyPressed=="fa-circle-down" && velocityY!=1){
         velocityX=0;
-        velcoityY=1;
+        velocityY=1;
         if(flagger){
             scorefunction();
             flagger=false;
         }
 
-    }else if(keyPressed=="fa-circle-right"){
+    }else if(keyPressed=="fa-circle-right" && velocityX!=-1){
         velocityX=1;
-        velcoityY=0;
+        velocityY=0;
         if(flagger){
             scorefunction();
             flagger=false;
         }
 
-    }else if(keyPressed=="fa-circle-left"){
+    }else if(keyPressed=="fa-circle-left" && velocityX!=1){
         velocityX=-1;
-        velcoityY=0;
+        velocityY=0;
         if(flagger){
             scorefunction();
             flagger=false;
@@ -109,30 +109,30 @@ document.addEventListener("keydown",function(e){
     // console.log(e);
     let keyPressed = e.key;
     
-    if(keyPressed=="ArrowUp" ){//add && constraint here
+    if(keyPressed=="ArrowUp" && velocityY!=1){//add && constraint here
         velocityX=0;
-        velcoityY=-1;
+        velocityY=-1;
         if(flag){
             scorefunction();
             flag = false;
         }
-    }else if(keyPressed=="ArrowDown"){
+    }else if(keyPressed=="ArrowDown" && velocityY!=-1){
         velocityX=0;
-        velcoityY=1;
+        velocityY=1;
         if(flag){
             scorefunction();
             flag = false;
         }
-    }else if(keyPressed=="ArrowRight"){
+    }else if(keyPressed=="ArrowRight" && velocityX!=-1){
         velocityX=1;
-        velcoityY=0;
+        velocityY=0;
         if(flag){
             scorefunction();
             flag = false;
         }
-    }else if(keyPressed=="ArrowLeft"){
+    }else if(keyPressed=="ArrowLeft" && velocityX!=1){
         velocityX=-1;
-        velcoityY=0;
+        velocityY=0;
         if(flag){
             scorefunction();
             flag = false;
@@ -145,7 +145,7 @@ document.addEventListener("keydown",function(e){
 
 function gameOver(){
     velocityX=0;//since after game over , it was still running after clicking ok
-    velcoityY=0;
+    velocityY=0;
     headX=12;
     headY=12;
     snakeBody=[];
