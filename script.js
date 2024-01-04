@@ -63,8 +63,8 @@ function scorefunction(val=0){
 function vibrate() {
     // Check if the vibration API is supported
     if ("vibrate" in navigator) {
-      // Vibrate for 100 milliseconds
-      navigator.vibrate(100);
+      // Vibrate for 50 milliseconds
+      navigator.vibrate(50);
     } else {
       console.warn("Vibration API not supported");
     }
