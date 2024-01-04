@@ -8,7 +8,8 @@
     width: 30vw;
     margin: auto;
     justify-content: center;
-    background-color: #EEE2DE ;
+    background:url("./snakegamebackground.jpg");
+    background-size:auto;
     box-shadow: 0 0 10px 1px #827c7a;
 }
 .score{
@@ -18,7 +19,7 @@
     background-color: #2B2A4C;
     justify-content: center;
     align-items: center;
-    font-size:x-large;
+    font-size:  1.75rem;
     color: white; 
 }
 .game-container{
@@ -29,14 +30,13 @@
     grid-template-rows: repeat(25,1fr);
 
 }
-.food{
-    background-color: rgb(232, 190, 90);
-    border-radius: 50%;
-    /* grid-area:  15 / 25 ; */
-}
+
 .head{
-    background-color: #10d388;
-    border-radius: 30%;
+    background-color: #4977EC;/*body*/
+    border-radius: 40%;
+}
+.food{
+    font-size: 1rem;
 }
 button i{
     font-size: 6vh ;
@@ -50,7 +50,7 @@ button:hover{
     border-radius: 50%;
 }
 .headcolor{
-    background-color: #13201b;
+    background-color: #1f46a8;
 }
 .controller{
     display: flex;
@@ -88,6 +88,9 @@ button:hover{
         width: 40vw;
     }
     .score{
-        
+        font-size: 2rem;
+    }
+    .food{
+        font-size: 1rem;
     }
 }

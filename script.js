@@ -20,7 +20,7 @@ function generateFood(){
 
 function renderGame(){
     
-    let updatedGame = `<div class="food" style="grid-area:${foodY}/${foodX}"></div>`;
+    let updatedGame = `<div class="food" style="grid-area:${foodY}/${foodX}">&#127827;</div>`;
     if(headX==foodX && headY==foodY){
         generateFood();
         count+=5;
