@@ -69,7 +69,7 @@ button:hover{
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1080px) {
     .container {
         width: 100%;
         height: 80vh;
@@ -86,5 +86,8 @@ button:hover{
     }
     .right-left{
         width: 40vw;
+    }
+    .score{
+        
     }
 }
